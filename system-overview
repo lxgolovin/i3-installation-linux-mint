@@ -1,11 +1,4 @@
 --[[
-#=====================================================================================
-#                               aureola
-# Date    : 21/07/2017
-# Version : v2.0.1
-# Author  : Erik Dubois at http://www.erikdubois.be
-# License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation : http://erikdubois.be/category/linux/aureola/
 #======================================================================================
 ]]
 
@@ -37,8 +30,8 @@ conky.config = {
 
 }
 conky.text = [[
-$alignr${color2}${font Noto Mono:size=16:bold}${time %A}${font}
-$alignr${color2}${font Noto Mono:size=14}${time %e} ${time %b} ${time %Y}${font}
+$alignr${color2}${font Noto Mono:size=11:bold}${time %A}${font}
+$alignr${color2}${font Noto Mono:size=9}${time %e} ${time %b} ${time %Y}${font}
 $hr
 #
 ${voffset 5}${goto 20}${color2}${font Noto Mono:size=11:bold}CPU$alignr${color2}$cpu%${font}
@@ -60,4 +53,5 @@ $hr
 ${color2}${font Noto Mono:size=10:bold}${alignr}Kernel: ${color2}${kernel}${font}
 ${alignr}${color2}${font Noto Mono:size=10:bold}Uptime: ${color2}${uptime_short}${font}
 ${voffset 0}$alignr$color${font Noto Mono:size=12:bold}${execi 5000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${font}
+$hr
 ]]

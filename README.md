@@ -78,5 +78,7 @@ You can do whatever <b>Y O U</b> want.
 
 Share the knowledge.
 
-I share my knowledge at http://erikdubois.be
+This repository was initially forked from this guy: http://erikdubois.be
+
+Thanks a lot to him!!!
 ------------------------------------------------

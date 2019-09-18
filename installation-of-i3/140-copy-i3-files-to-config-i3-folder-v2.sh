@@ -68,7 +68,7 @@ echo "Checking if git is installed and install it if it is not installed yet."
 
 
 
-case $DISTRO in 
+case $DISTRO in
 
 	LinuxMint|linuxmint|Ubuntu|ubuntu)
 
@@ -88,7 +88,7 @@ case $DISTRO in
 		  	echo "git was already installed. Proceeding..."
 		fi
 
-	
+
 		;;
 
 	Arch|arch)
@@ -152,7 +152,7 @@ esac
 
 # define the github here, just last part
 
-GITHUB=i3-installation-on-latest-linux-mint
+GITHUB=i3-installation-linux-mint
 
 echo "################################################################"
 echo "Checking if /tmp folder is clean"
@@ -162,7 +162,7 @@ echo "################################################################"
 echo "Downloading the files from github to /tmp directory " $GITHUB
 
 
-git clone https://github.com/erikdubois/$GITHUB /tmp/$GITHUB
+git clone https://github.com/lxgolovin/$GITHUB /tmp/$GITHUB
 
 
 echo "################################################################"
@@ -182,14 +182,14 @@ echo "Check if there is a ~/.config/i3 folder else make one"
 if find ~/.config/i3 -mindepth 1 > /dev/null ; then
 
 	read -p "Everything in folder ~/.config/i3 will be deleted. Are you sure? (y/n)?" choice
-	case "$choice" in 
+	case "$choice" in
  	 y|Y ) rm -rf ~/.config/i3/* ;;
  	 n|N ) echo "Nothing has changed." & echo "Script ended!" & exit;;
  	 * ) echo "Type y or n." & echo "Script ended!" & exit;;
 	esac
 
 else
-	echo "################################################################" 
+	echo "################################################################"
 	echo ".config/i3 folder is ready and empty. Files will now be copied."
 
 fi
@@ -200,7 +200,7 @@ fi
 
 
 # copy all config files to this hidden folder
-rm /tmp/$GITHUB/git-v1.sh 
+rm /tmp/$GITHUB/git-v1.sh
 rm /tmp/$GITHUB/setup-git-v1.sh
 
 cp -rf /tmp/$GITHUB/* ~/.config/i3
