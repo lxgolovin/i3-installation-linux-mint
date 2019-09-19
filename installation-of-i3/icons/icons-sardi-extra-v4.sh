@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Written to be used on 64 bits computers
-# Author 	: 	Erik Dubois
-# Website 	: 	http://www.erikdubois.be
-##################################################################################################################
-##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
@@ -49,7 +44,7 @@ echo "Checking presence of lsb-release and install it when missing"
 			sudo eopkg install -y lsb-release
 
 		fi
-		
+
 
 
 	fi
@@ -66,7 +61,7 @@ echo "################################################################"
 ########################                    D E P E N D A N C I E S                     ##########################
 ##################################################################################################################
 
-case $DISTRO in 
+case $DISTRO in
 
 	LinuxMint|linuxmint|Ubuntu|ubuntu)
 
@@ -113,7 +108,7 @@ case $DISTRO in
 		;;
 
 	Solus)
-	
+
 	# git
 
 		if ! location="$(type -p "git")" || [ -z "git" ]; then
