@@ -68,7 +68,8 @@ set $right semicolon
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+#exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+exec --no-startup-id xrandr --output LVDS-1 --mode 1280x800 --output VGA-1 --mode 1280x1024 --left-of LVDS-1
 
 
 # my current setup
@@ -531,13 +532,10 @@ bindsym control+mod1+v exec --no-startup-id vivaldi-snapshot;workspace 1; focus
 bindsym control+mod1+g exec --no-startup-id chromium-browser;workspace 1;focus
 
 #workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;workspace 2;focus
-bindsym $mod+F2 exec --no-startup-id atom;workspace 2;focus
-#bindsym control+mod1+w exec --no-startup-id geany;workspace 2;focus
-bindsym control+mod1+w exec --no-startup-id atom;workspace 2;focus
+bindsym $mod+F2 exec --no-startup-id intellij-idea-community;workspace 2;focus
 
 #workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;workspace 3;focus
+bindsym $mod+F3 exec --no-startup-id atom;workspace 3;focus
 
 #workspace 4 related
 bindsym $mod+F4 exec --no-startup-id gimp;workspace 4;focus
@@ -764,8 +762,8 @@ popup_during_fullscreen smart
 
 
 for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+gaps inner 3
+gaps outer 3
 #smart_gaps on
 #smart_borders on
 

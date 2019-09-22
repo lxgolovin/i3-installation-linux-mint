@@ -1,17 +1,17 @@
 --[[
-#=====================================================================================
+#======================================================================================
 ]]
 
 
 conky.config = {
-	alignment = 'bottom_right',
+	alignment = 'bottom_left',
 	background = true,
 	border_inner_margin = 5,
 	border_outer_margin = 5,
 	cpu_avg_samples = 2,
 	default_color = 'FFFFFF',
 	double_buffer = true,
-	font = 'Noto Mono:size=10',
+	font = 'Noto Mono:size=7',
 	gap_x = 25,
 	gap_y = 55,
 	minimum_width = 250,
