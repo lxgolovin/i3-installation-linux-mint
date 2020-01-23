@@ -408,8 +408,8 @@ for_window [class="Vivaldi-stable"] focus
 #exec --no-startup-id atom
 
 #file manager
-#exec --no-startup-id thunar
-exec --no-startup-id nemo
+# exec --no-startup-id thunar
+# exec --no-startup-id nemo
 
 #terminal
 exec --no-startup-id gnome-terminal
@@ -532,7 +532,7 @@ bindsym control+mod1+v exec --no-startup-id vivaldi-snapshot;workspace 1; focus
 bindsym control+mod1+g exec --no-startup-id chromium-browser;workspace 1;focus
 
 #workspace 2 related
-bindsym $mod+F2 exec --no-startup-id intellij-idea-community;workspace 2;focus
+bindsym $mod+F2 exec --no-startup-id intellij-idea-ultimate;workspace 2;focus
 
 #workspace 3 related
 bindsym $mod+F3 exec --no-startup-id atom;workspace 3;focus

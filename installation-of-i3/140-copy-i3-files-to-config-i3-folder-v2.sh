@@ -152,17 +152,18 @@ esac
 
 # define the github here, just last part
 
+TMP_DIR=~/tmp/
 GITHUB=i3-installation-linux-mint
 
 echo "################################################################"
-echo "Checking if /tmp folder is clean"
-[ -d /tmp/$GITHUB ] && rm -rf "/tmp/$GITHUB" & echo "/tmp is clean now" || echo "/tmp is clean"
+echo "Checking if $TMP_DIR folder is clean"
+[ -d "$TMP_DIR$GITHUB" ] && rm -rf "$TMP_DIR$GITHUB" & echo "$TMP_DIR is clean now" || echo "$TMP_DIR is clean"
 
 echo "################################################################"
-echo "Downloading the files from github to /tmp directory " $GITHUB
+echo "Downloading the files from github to $TMP_DIR directory " $GITHUB
 
-
-git clone https://github.com/lxgolovin/$GITHUB /tmp/$GITHUB
+mkdir -p $TMP_DIR
+git clone https://github.com/lxgolovin/$GITHUB $TMP_DIR$GITHUB
 
 
 echo "################################################################"
@@ -184,8 +185,8 @@ if find ~/.config/i3 -mindepth 1 > /dev/null ; then
 	read -p "Everything in folder ~/.config/i3 will be deleted. Are you sure? (y/n)?" choice
 	case "$choice" in
  	 y|Y ) rm -rf ~/.config/i3/* ;;
- 	 n|N ) echo "Nothing has changed." & echo "Script ended!" & exit;;
- 	 * ) echo "Type y or n." & echo "Script ended!" & exit;;
+ 	 n|N ) echo "Nothing has changed." & echo "Script ended!" & rm -rf $TMP_DIR & exit;;
+ 	 * ) echo "Type y or n." & echo "Script ended!" & rm -rf $TMP_DIR & exit;;
 	esac
 
 else
@@ -197,8 +198,8 @@ fi
 ##################################################################################################################
 ######################              M O V I N G  I N  N E W  F I L E S                        ####################
 ##################################################################################################################
-cp -rf /tmp/$GITHUB/* ~/.config/i3
-rm -rf /tmp/$GITHUB
+cp -rf $TMP_DIR$GITHUB/* ~/.config/i3
+rm -rf $TMP_DIR
 
 echo "################################################################"
 echo "In this hidden folder ~/.config/i3 you will find"
