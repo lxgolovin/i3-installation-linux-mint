@@ -420,7 +420,7 @@ exec --no-startup-id gnome-terminal
 
 #Music
 #exec --no-startup-id spotify
-for_window [class="Spotify"] focus
+# for_window [class="Spotify"] focus
 
 
 
@@ -563,8 +563,8 @@ bindsym control+mod1+e exec --no-startup-id evolution;workspace 9;focus
 #bindsym control+mod1+e exec --no-startup-id geary;workspace 9;focus
 
 #workspace 10 related
-bindsym $mod+F10 exec --no-startup-id spotify;workspace 10;focus
-bindsym control+mod1+s exec --no-startup-id spotify;workspace 10;focus
+# bindsym $mod+F10 exec --no-startup-id spotify;workspace 10;focus
+# bindsym control+mod1+s exec --no-startup-id spotify;workspace 10;focus
 
 
 
@@ -605,7 +605,6 @@ for_window [class="Nitrogen"] floating disable
 for_window [class="Pavucontrol"] floating disable
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable
-for_window [class="^Spotify$"] floating disable
 for_window [class="System-config-printer.py"] floating enable
 for_window [class="Unetbootin.elf"] floating enable
 for_window [class="Usb-creator-gtk"] floating enable
@@ -690,11 +689,6 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
-#bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-#bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-#bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-#bindsym XF86AudioStop exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-
 
 #####################################################################################################################
 #################                          xbacklight                                               #################
